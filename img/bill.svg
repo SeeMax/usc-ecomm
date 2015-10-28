@@ -1,0 +1,9 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.5 35.5">
+  <circle class="svg-bill-background" cx="17.7" cy="17.7" r="17.7"/>
+  <g>
+    <polygon class="svg-bill-paper" points="25.4,27.8 9.4,27.8 9.4,10.5 12.2,7.1 25.4,7.1  "/>
+    <polygon class="svg-bill-fold" points="9.4,10.5 12.2,7.1 13.1,10.5  "/>
+  </g>
+  <circle id="svg-bill-dollarbackround" class="svg-bill-dollarbackround" cx="17" cy="17.2" r="4.8"/>
+  <path id="svg-bill-dollar" class="svg-bill-dollar" d="M17.3,14.5c0.6,0,0.9,0.2,1.2,0.4v0.3h-0.2c-0.3-0.2-0.6-0.4-1-0.4v2c0.9,0.3,1.4,0.5,1.4,1.4 c0,0.9-0.6,1.4-1.5,1.4v0.7H17v-0.7c-0.7,0-1.1-0.2-1.4-0.5v-0.3h0.2c0.3,0.3,0.6,0.5,1.3,0.5v-2.2c-0.9-0.2-1.3-0.5-1.3-1.3 c0-0.7,0.5-1.2,1.3-1.3v-0.4h0.3V14.5z M17,16.7v-1.9c-0.7,0.1-1,0.5-1,0.9C16,16.4,16.4,16.5,17,16.7z M17.3,17.2v2.1 c0.7,0,1.1-0.4,1.1-1.1C18.4,17.5,18,17.4,17.3,17.2z"/>
+</svg>

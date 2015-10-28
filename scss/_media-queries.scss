@@ -1,0 +1,45 @@
+@media (min-width: 700px) and (max-width: 900px) {
+
+  .ecomm-page {
+    font-size:14px;
+  }
+}
+
+
+@media (max-width: 699px) {
+
+  .ecomm-page {
+    font-size:14px;
+
+    .fact {
+      width:100% !important;
+    }
+
+    .customers-single {
+      width:100%;
+
+      &:nth-of-type(1) {
+        border-right: 0px white solid;
+        border-bottom: 1px white solid;
+      }
+
+      .image {
+        position: relative;
+        z-index: 2;
+        width: 46%;
+        margin: 0 auto;
+      }
+
+      .fact-row {
+        width: 90%;
+        padding-left: 0;
+      }
+
+      .customers-single-header {
+        width: 60%;
+        left: 0;
+      }
+    }
+  }
+
+}

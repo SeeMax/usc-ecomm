@@ -1,0 +1,456 @@
+/*-------------------*/
+/*  GLOBAL          */
+/*-----------------*/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+}
+
+.ecomm-page {
+  color:white;
+  font: 18px/1.2 'stag-book', Arial, Sans-Serif;
+  margin: 0 auto;
+  max-width: 900px;
+
+  .section {
+    margin-bottom:8px;
+  }
+
+  .content {
+    padding: 12px 10px;
+    width:100%;
+  }
+
+  h1, h2, h3, h4 {
+    margin:0;
+  }
+
+  h1 {
+    font: 2.4em 'stag-light';
+  }
+
+  h2 {
+    font: 1.222em 'stag-book';
+    font-style: italic;
+  }
+
+  h3 {
+    font: 1em 'stag-light';
+  }
+
+  .digits {
+    font: 2.8em 'stag-black';
+    line-height: 1;
+  }
+
+  .sub-digits {
+    font-family: 'stag-light';
+    font-size:1.1em;
+  }
+
+  .svg-container {
+      width: 100%;
+      height: 0;
+      padding-top: 100%;
+      position: relative;
+  }
+
+  svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+
+
+
+
+  /*-------------------*/
+  /*  HEADER          */
+  /*-----------------*/
+
+  .section-header {
+    background: $lightGrey;
+    color: $darkBlue;
+    text-align: center;
+
+    .content {
+      padding:19px;
+    }
+
+    img {
+      max-height: 40px;
+      margin-bottom: 12px;
+    }
+
+    .bolder {
+      font-family: 'stag-medium';
+    }
+  }
+
+
+
+
+
+  /*-------------------*/
+  /*  TRAFFIC         */
+  /*-----------------*/
+
+  .section-traffic {
+    background: $usccBlue;
+    overflow: hidden;
+
+    .content {
+      padding-bottom: 30px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    .fact {
+      overflow: visible;
+      float:left;
+      width:32.3333%;
+      margin-right:0;
+      margin-left:1%;
+
+      &:nth-last-child(1) {
+        width:32.3333%;
+        margin-right:0;
+        margin-left:0%;
+
+        .text {
+          position: relative;
+          width: 76%;
+          background: #c22532;
+          margin-left: -16%;
+          padding-left: 20%;
+          padding-bottom: 5%;
+
+          .sub-digits {
+            line-height: .8;
+          }
+        }
+
+        .image {
+          position: relative;
+          margin-top:-1.5%;
+          width:36%;
+        }
+      }
+
+      &:nth-last-child(2) {
+        width:32.3333%;
+        margin-right:2%;
+        margin-left:0;
+      }
+    }
+
+    .image {
+      float:left;
+      width:32%;
+    }
+
+    .svg-container {
+
+    }
+
+    .text {
+      float:left;
+      width:68%;
+      padding-left: 10px;
+    }
+
+    .digits {
+      font-size:3.3em;
+    }
+
+    .sub-digits {
+      font-size:1.38em;
+    }
+  }
+
+
+
+
+  /*-------------------*/
+  /*  GROSS           */
+  /*-----------------*/
+
+  .section-gross {
+    background: $lightBlue;
+    overflow: hidden;
+
+    h2 {
+      display: inline-block;
+      font-style: normal;
+      line-height: 60px;
+      vertical-align: middle;
+    }
+
+    .digits {
+      display: inline-block;
+      font-size: 3.6em;
+      vertical-align: middle;
+      margin-left:15px;
+    }
+
+    .gross-red {
+      background: $usccRed;
+      display: inline-block;
+      width:70%;
+      padding-right:20px;
+      text-align: right;
+    }
+
+    .gross-blue {
+      display: inline-block;
+      width:29%;
+      padding-left:20px;
+    }
+  }
+
+
+
+
+  /*-------------------*/
+  /*  CUSTOMERS       */
+  /*-----------------*/
+
+  .section-customers {
+    background: $darkBlue;
+    overflow: hidden;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+  }
+
+  .customers-single {
+    position: relative;
+    float:left;
+    width:50%;
+    padding: 5px 0 20px 0;
+
+    &:nth-of-type(2) {
+      border-left:1px white solid;
+    }
+
+    .customers-single-header {
+      width:33%;
+      margin: 0 auto;
+      position: relative;
+      left: -2%;
+
+      .image {
+        width:100%;
+        margin:0;
+      }
+    }
+
+    .fact-row {
+      margin:0 auto;
+      width:95%;
+      padding-left: 3%;
+    }
+
+    .fact {
+      float:left;
+      width:33.3333333%;
+      text-align: center;
+      margin-top: -18px;
+    }
+
+    .image {
+      position: relative;
+      z-index: 2;
+      width:46%;
+      margin: 0 0 16px 20px;
+    }
+
+    .text {
+      margin: 10px auto 0 auto;
+      width:80%;
+    }
+
+    .digits {
+      text-align: left;
+      font-size: 1.5em;
+    }
+
+    .sub-digits {
+      text-align: left;
+      font:1em 'stag-book';
+    }
+
+    .linking-line-group {
+      position: relative;
+      z-index: 1;
+      width: 61%;
+      margin: -39px 0 -22px 18%;
+    }
+
+    .linking-line-single {
+      float:left;
+      width:33%;
+
+
+      .line {
+        margin:0 auto;
+        width:2px;
+        height:100px;
+        background:$lightBlue;
+        transform:rotate(45deg);
+        transform-origin:center center;
+      }
+
+      &:nth-child(2) {
+
+        .line {
+          transform:rotate(0deg);
+        }
+      }
+
+      &:nth-child(3) {
+
+        .line {
+          transform:rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .customers-subsection {
+
+    .content {
+      padding: 5px;
+    }
+
+    .fact {
+      float:left;
+      width:49.75%;
+      background: $lightBlue;
+      padding: 20px 15px 10px 15px ;
+      overflow: hidden;
+
+      &:nth-child(1) {
+        margin-right:.5%;
+      }
+    }
+
+    .text {
+      margin-top: 5px;
+      width:85%;
+      float:left;
+    }
+
+    .digits {
+      float:left;
+      width:32%;
+    }
+
+    .sub-digits {
+      width:50%;
+      float:left;
+    }
+
+    .image {
+      width:15%;
+      float:left;
+    }
+
+    .svg-magnify-image {
+      width:16%;
+      margin-top:-6px;
+    }
+
+    .svg-container {
+        width: 100%;
+        height: 0;
+        position: relative;
+    }
+
+    .svg-magnify-container {
+      padding-top: 93%;
+      width:90%;
+    }
+
+    .svg-screen-container {
+      padding-top: 90%;
+    }
+  }
+
+
+
+
+
+  /*-------------------*/
+  /*  IMPACT          */
+  /*-----------------*/
+
+  .section-impact {
+    background: $lightBlue;
+
+    .content {
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .image {
+      width:50%;
+      max-width:90px;
+      float:left;
+      margin-right:18px;
+    }
+
+    .text {
+      float:left;
+    }
+
+    .fact {
+      text-align: center;
+      float:left;
+      width:50%;
+      padding-left: 20px;
+
+      &:nth-of-type(2) {
+        border-left:1px white solid;
+      }
+    }
+
+    .fact-container {
+      margin:0 auto;
+    }
+
+    .digits {
+      margin-top:10px;
+      text-align: left;
+    }
+
+    .sub-digits {
+      text-align: left;
+    }
+  }
+
+}/*  <-- CLOSES PAGE-SCOPING CLASS --<<  */
