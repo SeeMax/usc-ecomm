@@ -6,7 +6,7 @@ function ImpactTimeline () {
   var impactSection = $('#section-impact')
 
   impactTL.set(impactSection, {transformStyle: "preserve-3d", transformPerspective:200 })
-          .from(impactSection, 1, {opacity:0, rotationX:-90, transformOrigin: "top center", ease: Elastic.easeInOut.config(.5, .75)});
+          .from(impactSection, .5, {opacity:0, height:0, rotationX:-90, transformOrigin: "top center", ease: Elastic.easeInOut.config(.5, .75)});
 
 
 
@@ -18,8 +18,8 @@ function ImpactTimeline () {
   var impactTextOne = $('#impact-fact-one .text');
 
 
-  impactFactOneTL.from(impactSvgOne, 1, {scale:0, ease: Bounce.easeOut}, "svgAnimateOpenOne")
-                 .from(impactTextOne, .5, { letterSpacing:0, scale:.2, opacity:0, x:-60, rotationY:-90, transformOrigin:"0 50%",ease: Power4.easeOut}, "svgAnimateOpenOne+=.2");
+  impactFactOneTL.from(impactSvgOne, .5, {scale:0, ease: Bounce.easeOut}, "svgAnimateOpenOne")
+                 .from(impactTextOne, .3, { letterSpacing:0, scale:.2, opacity:0, x:-60, rotationY:-90, transformOrigin:"0 50%",ease: Power4.easeOut}, "svgAnimateOpenOne+=.2");
 
   // ANIMATING CART AND BOXES
   var cartTL = new TimelineMax({repeat:3, repeatDelay:2 });
@@ -45,8 +45,8 @@ function ImpactTimeline () {
   var impactTextTwo = $('#impact-fact-two .text');
 
 
-  impactFactTwoTL.from(impactSvgTwo, 1, {scale:0, ease: Bounce.easeOut}, "svgAnimateOpenTwo")
-                 .from(impactTextTwo, .5, { letterSpacing:0, scale:.2, opacity:0, x:-60, rotationY:-90, transformOrigin:"0 50%",ease: Power4.easeOut}, "svgAnimateOpenTwo+=.2");
+  impactFactTwoTL.from(impactSvgTwo, .5, {scale:0, ease: Bounce.easeOut}, "svgAnimateOpenTwo")
+                 .from(impactTextTwo, .3, { letterSpacing:0, scale:.2, opacity:0, x:-60, rotationY:-90, transformOrigin:"0 50%",ease: Power4.easeOut}, "svgAnimateOpenTwo+=.2");
 
   // ANIMATING THE PIN ON THE PHONE MAP
   var phonePinTL = new TimelineMax({repeat:3, repeatDelay:2 });
@@ -59,8 +59,6 @@ function ImpactTimeline () {
 
   phonePinTL.from(pinDevice, .5, {scale:0, transformOrigin: "50% 50%", opacity:0, ease: Elastic.easeOut.config(.5, .75)}, "deviceIn")
   .from(pinLogo, .3, {delay:.2, opacity:0, ease: Power4.easeOut})
-  .from(pinDeviceback, .5, {fill:"black", ease: Bounce.easeInOut}, "deviceOn")
-  .from(pinRoads, .3, {opacity:0, ease: Power4.easeOut}, "deviceOn+=.9")
   .from(pinPin, .75, {y:-25, scale:5, rotationX:100, transformOrigin: "50% 50%", ease: Bounce.easeOut}, "pinBounce")
   .from(pinLogo, .3, {y:.75, ease: Bounce.easeInOut, repeat:1}, "pinBounce+=.1");
 
@@ -70,7 +68,7 @@ function ImpactTimeline () {
 
 
   impactTL.add(impactFactOneTL, "+=.8")
-  .add(impactFactTwoTL, "6.5");
+  .add(impactFactTwoTL, "2.8");
 
 
   return impactTL;

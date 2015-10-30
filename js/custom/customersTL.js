@@ -6,7 +6,7 @@ function CustomersTimeline () {
       fullCustomersSectionHeadline = $('#section-customers h2');
 
   fullCustomersTL.add("customerFullIntro")
-                 .from(fullCustomersSection, .2, {opacity:0, margin:0, ease: Elastic.easeInOut.config(.3, .2)}, "customerFullIntro")
+                 .from(fullCustomersSection, .2, {opacity:0, margin:0, ease: Power4.easeOut}, "customerFullIntro")
                  .from(fullCustomersSectionHeadline, .3, {y:"-500%", height:0, margin:0, opacity:0, ease: Elastic.easeInOut.config(.2, .75)}, "customerFullIntro");
 
 
@@ -15,13 +15,46 @@ function CustomersTimeline () {
 
   var prospectiveSection = $('#customer-prospective');
       prospectiveHeaderHeadline = $('#customer-prospective h3'),
-      prospectiveHeaderImage = $('#customer-prospective .customers-single-header .image');
+      prospectiveHeaderImage = $('#customer-prospective .customers-single-header .image'),
+      linkLineOne = $("#linking-line-one"),
+      linkLineTwo = $("#linking-line-two"),
+      linkLineThree = $("#linking-line-three");
+
 
   // CREATE INTRO TIMELINE
-  prospectiveCustomersTL.from(prospectiveSection, .5, {height:0, padding:0, ease: Elastic.easeInOut.config(.3, .2)})
+  prospectiveCustomersTL.from(prospectiveSection, .5, {height:0, paddingLeft:0, paddingRight:0, ease: Power4.easeOut})
     .add("prospectiveIntro")
     .from(prospectiveHeaderImage, .5, {scale:0, ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro")
-    .from(prospectiveHeaderHeadline, .5, {y:50, opacity:0, ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro");
+    .from(prospectiveHeaderHeadline, .5, {y:50, opacity:0, ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro")
+    .from(linkLineOne, .7 , {scale:0, transformOrigin: "top right", ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro")
+    .from(linkLineTwo, .7 , {scale:0, transformOrigin: "top center", ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro")
+    .from(linkLineThree, .7 , {scale:0, transformOrigin: "top left", ease: Elastic.easeInOut.config(.3, .2)}, "prospectiveIntro");
+
+
+
+
+
+
+    // DEFINE CURRENT SECTION TIMELINE
+    var CurrentCustomersTL = new TimelineMax();
+
+    var CurrentSection = $('#customer-current'),
+        CurrentHeaderHeadline = $('#customer-current h3'),
+        CurrentHeaderImage = $('#customer-current .customers-single-header .image'),
+        linkLineFour = $("#linking-line-four"),
+        linkLineFive = $("#linking-line-five"),
+        linkLineSix = $("#linking-line-six");
+
+    // CREATE INTRO TIMELINE
+    CurrentCustomersTL.from(CurrentSection, .5, {height:0, paddingLeft:0, paddingRight:0, ease: Power4.easeOut})
+      .add("CurrentIntro")
+      .from(CurrentHeaderImage, .5, {scale:0, ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro")
+      .from(CurrentHeaderHeadline, .5, {y:50, opacity:0, ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro")
+      .from(linkLineFour, .7 , {scale:0, transformOrigin: "top right", ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro")
+      .from(linkLineFive, .7 , {scale:0, transformOrigin: "top center", ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro")
+      .from(linkLineSix, .7 , {scale:0, transformOrigin: "top left", ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro");
+
+
 
 
 
@@ -30,8 +63,7 @@ function CustomersTimeline () {
   var factOneTL = new TimelineMax();
 
   // DEFINE OBJECTS FOR FACT ONE TIMELINE
-  var linkLineOne = $("#linking-line-one"),
-      customersFactOne = $("#customer-fact-one"),
+  var customersFactOne = $("#customer-fact-one"),
       customersFactOneImage = $("#customer-fact-one .image"),
       customersFactOneText = $("#customer-fact-one .text"),
       customersFactOneDigits = $('#customer-fact-one .digits'),
@@ -41,8 +73,7 @@ function CustomersTimeline () {
       mapLand = $('#svg-map-land');
 
   // ANIMATE IMAGE TEXT IN
-  factOneTL.from(linkLineOne, .7 , {scale:0, transformOrigin: "top right", ease: Elastic.easeInOut.config(.3, .2)})
-  .from(customersFactOneImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factOneTL.from(customersFactOneImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
   .add("textOutOne", "-=.3")
   .from(customersFactOneDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutOne")
   .from(customersFactOneSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutOne")
@@ -57,8 +88,7 @@ function CustomersTimeline () {
   var factTwoTL = new TimelineMax();
 
   // DEFINE OBJECTS FOR FACT Two TIMELINE
-  var linkLineTwo = $("#linking-line-two"),
-      customersFactTwo = $("#customer-fact-two"),
+  var customersFactTwo = $("#customer-fact-two"),
       customersFactTwoImage = $("#customer-fact-two .image"),
       customersFactTwoText = $("#customer-fact-two .text"),
       customersFactTwoDigits = $('#customer-fact-two .digits'),
@@ -66,8 +96,7 @@ function CustomersTimeline () {
       burstBurst = $('#svg-burst-burst');
 
   // ANIMATE IMAGE TEXT IN
-  factTwoTL.from(linkLineTwo, .7 , {scale:0, transformOrigin: "top center", ease: Elastic.easeInOut.config(.3, .2)})
-  .from(customersFactTwoImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factTwoTL.from(customersFactTwoImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
   .add("textOutTwo", "-=.3")
   .from(customersFactTwoDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutTwo")
   .from(customersFactTwoSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutTwo")
@@ -82,8 +111,7 @@ function CustomersTimeline () {
       gigaDeviceOutTL = new TimelineMax({repeat:2, repeatDelay:1});
 
   // DEFINE OBJECTS FOR FACT THREE TIMELINE
-  var linkLineThree = $("#linking-line-three"),
-      customersFactThree = $("#customer-fact-three"),
+  var customersFactThree = $("#customer-fact-three"),
       customersFactThreeImage = $("#customer-fact-three .image"),
       customersFactThreeText = $("#customer-fact-three .text"),
       customersFactThreeDigits = $('#customer-fact-three .digits'),
@@ -91,8 +119,7 @@ function CustomersTimeline () {
       gigaPhone = $('#svg-gigabyte-device');
 
   // ANIMATE IMAGE TEXT IN
-  factThreeTL.from(linkLineThree, .7 , {scale:0, transformOrigin: "top left", ease: Elastic.easeInOut.config(.3, .2)})
-  .from(customersFactThreeImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factThreeTL.from(customersFactThreeImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
   .add("textOutThree", "-=.3")
   .from(customersFactThreeDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutThree")
   .from(customersFactThreeSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutThree")
@@ -113,30 +140,12 @@ function CustomersTimeline () {
 
 
 
-  // DEFINE CURRENT SECTION TIMELINE
-  var CurrentCustomersTL = new TimelineMax();
-
-  var CurrentSection = $('#customer-current'),
-      CurrentHeaderHeadline = $('#customer-current h3'),
-      CurrentHeaderImage = $('#customer-current .customers-single-header .image');
-
-  // CREATE INTRO TIMELINE
-  CurrentCustomersTL.from(CurrentSection, .5, {height:0, padding:0, ease: Elastic.easeInOut.config(.3, .2)})
-    .add("CurrentIntro")
-    .from(CurrentHeaderImage, .5, {scale:0, ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro")
-    .from(CurrentHeaderHeadline, .5, {y:50, opacity:0, ease: Elastic.easeInOut.config(.3, .2)}, "CurrentIntro");
-
-
-
-
-
   // CREATE FACT Four TIMELINE
   var factFourTL = new TimelineMax(),
       wrenchTL = new TimelineMax({repeat:3, repeatDelay:.2});
 
   // DEFINE OBJECTS FOR FACT Four TIMELINE
-  var linkLineFour = $("#linking-line-four"),
-      customersFactFour = $("#customer-fact-four"),
+  var customersFactFour = $("#customer-fact-four"),
       customersFactFourImage = $("#customer-fact-four .image"),
       customersFactFourText = $("#customer-fact-four .text"),
       customersFactFourDigits = $('#customer-fact-four .digits'),
@@ -144,8 +153,7 @@ function CustomersTimeline () {
       wrench = $('#svg-wrench-wrench');
 
   // ANIMATE IMAGE TEXT IN
-  factFourTL.from(linkLineFour, .7 , {scale:0, transformOrigin: "top right", ease: Elastic.easeInOut.config(.3, .2)})
-  .from(customersFactFourImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factFourTL.from(customersFactFourImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
   .add("textOutFour", "-=.3")
   .from(customersFactFourDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutFour")
   .from(customersFactFourSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutFour");
@@ -168,8 +176,7 @@ function CustomersTimeline () {
       billDollarTL = new TimelineMax({repeat:3});
 
   // DEFINE OBJECTS FOR FACT five TIMELINE
-  var linkLinefive = $("#linking-line-five"),
-      customersFactFive = $("#customer-fact-five"),
+  var customersFactFive = $("#customer-fact-five"),
       customersFactFiveImage = $("#customer-fact-five .image"),
       customersFactFiveText = $("#customer-fact-five .text"),
       customersFactFiveDigits = $('#customer-fact-five .digits'),
@@ -178,8 +185,7 @@ function CustomersTimeline () {
       billDollarBackground = $('#svg-bill-dollarbackround');
 
   // ANIMATE IMAGE TEXT IN
-  factFiveTL.from(linkLinefive, .7 , {scale:0, transformOrigin: "top center", ease: Elastic.easeInOut.config(.3, .2)})
-            .from(customersFactFiveImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factFiveTL.from(customersFactFiveImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
             .add("textOutfive", "-=.3")
             .from(customersFactFiveDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutfive")
             .from(customersFactFiveSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutfive")
@@ -204,8 +210,7 @@ function CustomersTimeline () {
       bagDeviceTL = new TimelineMax({repeat:4, repeatDelay:2});
 
   // DEFINE OBJECTS FOR FACT Six TIMELINE
-  var linkLineSix = $("#linking-line-six"),
-      customersFactSix = $("#customer-fact-six"),
+  var customersFactSix = $("#customer-fact-six"),
       customersFactSixImage = $("#customer-fact-six .image"),
       customersFactSixText = $("#customer-fact-six .text"),
       customersFactSixDigits = $('#customer-fact-six .digits'),
@@ -214,8 +219,7 @@ function CustomersTimeline () {
       bagDevice = $('#svg-bag-device');
 
   // ANIMATE IMAGE TEXT IN
-  factSixTL.from(linkLineSix, .7 , {scale:0, transformOrigin: "top left", ease: Elastic.easeInOut.config(.3, .2)})
-            .from(customersFactSixImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
+  factSixTL.from(customersFactSixImage, .4, {transformOrigin: "top center", scale:0, opacity:0, ease: Elastic.easeOut.config(1, .5)}, "-=.33")
             .add("textOutSix", "-=.3")
             .from(customersFactSixDigits, .3, {opacity:0, y:-5, lineHeight:"0px", ease: Power4.easeInOut}, "textOutSix")
             .from(customersFactSixSubDigits, .3, {opacity:0, y:-20, ease: Power4.easeInOut}, "textOutSix");
@@ -234,14 +238,14 @@ function CustomersTimeline () {
 
   // ADD SUBTIMELINES TO MASTER CUSTOMERS SECTION TIMELINE
   customersTL.add(fullCustomersTL)
-  .add(prospectiveCustomersTL, "+=.3")
-  .add(factOneTL, "2")
-  .add(factTwoTL, "4")
-  .add(factThreeTL, "6")
-  .add(CurrentCustomersTL, "8.5")
-  .add(factFourTL, "10.5")
-  .add(factFiveTL, "12.6")
-  .add(factSixTL, "15.2");
+  .add(prospectiveCustomersTL, "0")
+  .add(CurrentCustomersTL, "0")
+  .add(factOneTL, "1.5")
+  .add(factTwoTL, "2.5")
+  .add(factThreeTL, "3.5")
+  .add(factFourTL, "4.5")
+  .add(factFiveTL, "5.5")
+  .add(factSixTL, "6.5");
 
   return customersTL;
 }

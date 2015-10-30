@@ -15,8 +15,7 @@ function CustomersSubTimeline () {
       customersSubDigitsOne = $('#subsection-fact-one .sub-digits');
 
   // OPEN CUSTOMERS SECTION, ANIMATE SVG, AND MOVE TYPE OUT FROM BEHIND CIRCLE
-  customersSubOneTL.from(customersSubSectionOne, .2, {height:0, padding:0})
-  .from(customersSubFactOne, .3, {height:0, padding:0, ease: Elastic.easeInOut.config(1, .75)})
+  customersSubOneTL
   .from(customersDigitsOne, .5, {opacity:0, x:-40, ease: Elastic.easeInOut.config(1.2, .75)}, "+=.2")
   .add("subdigitsOneIn")
   .from(customersSubDigitsOne, .4, {x:-40, opacity:0, ease: Elastic.easeInOut.config(1.2, .75)}, "subdigitsInOne-=.3")
@@ -62,8 +61,7 @@ function CustomersSubTimeline () {
       customersSubDigitsTwo = $('#subsection-fact-two .sub-digits');
 
   // OPEN CUSTOMERS SECTION, ANIMATE SVG, AND MOVE TYPE OUT FROM BEHIND CIRCLE
-  customersSubTwoTL.from(customersSubSectionTwo, .2, {height:0, padding:0})
-  .from(customersSubFactTwo, .3, {height:0, padding:0, ease: Elastic.easeInOut.config(1, .75)})
+  customersSubTwoTL
   .from(customersDigitsTwo, .5, {opacity:0, x:-40, ease: Elastic.easeInOut.config(1.2, .75)}, "+=.2")
   .add("subdigitsTwoIn")
   .from(customersSubDigitsTwo, .4, {x:-40, opacity:0, ease: Elastic.easeInOut.config(1.2, .75)}, "subdigitsInTwo-=.3")
@@ -92,7 +90,7 @@ function CustomersSubTimeline () {
 
   // ADD SUBTIMELINES TO MASTER CUSTOMERS SECTION TIMELINE
   customersSubTL.add(customersSubOneTL, "+=.8")
-  .add(customersSubTwoTL, "5");
+  .add(customersSubTwoTL, "2.8");
 
   return customersSubTL;
 }

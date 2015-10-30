@@ -5,8 +5,7 @@ function TrafficTimeline () {
   var trafficSection= $('#section-traffic'),
       trafficSectionContent= $('#section-traffic .content');
 
-  trafficTL.from(trafficSection, 1, {padding:0, height:0, margin:0,ease: Power4.easeIn})
-           .from(trafficSectionContent, 1, {y:"-500%", opacity:0, ease: Power4.easeOut});
+  trafficTL.from(trafficSection, .6, {padding:0, height:0, margin:0,ease: Power4.easeIn})
 
 
 
@@ -19,7 +18,7 @@ function TrafficTimeline () {
       trafficFactOneSubDigits = $('#traffic-fact-one .sub-digits');
 
   trafficFactOneTL.from(trafficFactOneImage, .3, {opacity:0, x:"-100%", ease:Power4.easeIn})
-                  .from(trafficFactOneText, .3, {opacity:0, x:"-20%", ease:Power4.easeIn});
+                  .from(trafficFactOneText, .2, {opacity:0, x:"-20%", ease:Power4.easeIn});
 
 
   var manWalkingTL = new TimelineMax({repeat:3, repeatDelay:.7});
@@ -49,10 +48,10 @@ function TrafficTimeline () {
       trafficFactTwoSubDigits = $('#traffic-fact-two .sub-digits');
 
   trafficFactTwoTL.from(trafficFactTwoImage, .3, {opacity:0, x:"-100%", ease:Power4.easeIn})
-                  .from(trafficFactTwoText, .3, {opacity:0, x:"-20%", ease:Power4.easeIn});
+                  .from(trafficFactTwoText, .2, {opacity:0, x:"-20%", ease:Power4.easeIn});
 
 
-  var handSetTL = new TimelineMax({repeat:3, repeatDelay:.7});
+  var handSetTL = new TimelineMax({repeat:4, repeatDelay:.7});
 
   var soundWaves = $('.svg-handset-soundwave')
       handSetHandset = $('#svg-handset-handset');
@@ -76,23 +75,23 @@ function TrafficTimeline () {
       trafficFactThreeDigits = $('#traffic-fact-three .digits'),
       trafficFactThreeSubDigits = $('#traffic-fact-three .sub-digits');
 
-  trafficFactThreeTL.to(trafficFactThreeText, 0, {zIndex:-2, whiteSpace: "nowrap"})
+  trafficFactThreeTL.to(trafficFactThreeText, 0, {whiteSpace: "nowrap"})
                     .from(trafficFactThreeImage, .3, {opacity:0, x:"-100%", ease:Power4.easeIn})
-                    .from(trafficFactThreeText, .3, {width:0, marginLeft:0, padding:0, overflow:"hidden", x:"-100%", ease:Power4.easeOut})
+                    .from(trafficFactThreeText, .2, {width:0, marginLeft:0, padding:0, overflow:"hidden", x:"-100%", ease:Power4.easeOut})
                     .to(trafficFactThreeText, 0, {whiteSpace: "wrap"});
 
 
-  var laptopTL = new TimelineMax({repeat:3, repeatDelay:.3});
+  var laptopTL = new TimelineMax({repeat:4, repeatDelay:.3});
 
   var laptopLogo = $('#svg-laptop-computerlogo'),
       laptopDeviceLogo = $('#svg-laptop-phonelogo');
 
-  laptopTL.fromTo(laptopLogo, .5, {transformOrigin:'center center', scale:.3, opacity:0}, {scale:1.1, opacity:1})
-          .to(laptopLogo, 1, {scale:1})
-          .to(laptopLogo, .5, {scale:.3, opacity:0})
-          .fromTo(laptopDeviceLogo, .5, {transformOrigin:'center center', scale:.3, opacity:0}, {scale:1.1, opacity:1}, "-=1")
-          .to(laptopDeviceLogo, 1, {scale:1})
-          .to(laptopDeviceLogo, .5, {scale:.3, opacity:0});
+  laptopTL.fromTo(laptopLogo, .3, {transformOrigin:'center center', scale:.3, opacity:0}, {scale:1.1, opacity:1})
+          .to(laptopLogo, .3, {scale:1})
+          .to(laptopLogo, .3, {scale:.3, opacity:0})
+          .fromTo(laptopDeviceLogo, .3, {transformOrigin:'center center', scale:.3, opacity:0}, {scale:1.1, opacity:1}, "-=1")
+          .to(laptopDeviceLogo, .3, {scale:1})
+          .to(laptopDeviceLogo, .3, {scale:.3, opacity:0});
 
 
   trafficFactThreeTL.add(laptopTL);
@@ -100,9 +99,9 @@ function TrafficTimeline () {
 
 
 
-  trafficTL.add(trafficFactOneTL)
-           .add(trafficFactTwoTL, "4.5")
-           .add(trafficFactThreeTL, "7");
+  trafficTL.add(trafficFactOneTL, "1")
+           .add(trafficFactTwoTL, "2")
+           .add(trafficFactThreeTL, "3");
 
 
   return trafficTL;
