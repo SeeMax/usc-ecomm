@@ -1,5 +1,9 @@
-var headerTL = new TimelineMax();
+function HeaderTimeline () {
+  var headerTL = new TimelineMax();
 
-var headerHeadline = $('#section-header h1');
+  var headerHeadline = $('#section-header h1');
 
-headerTL.from(headerHeadline, 4, {scale:.8, ease: Power1.easeOut});
+  headerTL.from(headerHeadline, 4, {scale:.8, ease: Power1.easeOut});
+
+  return headerTL;
+}

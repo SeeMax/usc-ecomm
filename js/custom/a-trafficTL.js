@@ -1,4 +1,4 @@
-function trafficTimeline() {
+function TrafficTimeline () {
 
   var trafficTL = new TimelineMax();
 
@@ -103,4 +103,7 @@ function trafficTimeline() {
   trafficTL.add(trafficFactOneTL)
            .add(trafficFactTwoTL, "4.5")
            .add(trafficFactThreeTL, "7");
+
+
+  return trafficTL;
 }
